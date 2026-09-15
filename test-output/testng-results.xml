@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-09-14T15:14:04 IST" name="Default suite" finished-at="2026-09-14T15:15:52 IST" duration-ms="107784">
+    <groups>
+    </groups>
+    <test started-at="2026-09-14T15:14:04 IST" name="Default test" finished-at="2026-09-14T15:15:52 IST" duration-ms="107784">
+      <class name="Test.DemoR_D">
+        <test-method is-config="true" signature="openURL()[pri:0, instance:Test.DemoR_D@bcec361]" started-at="2026-09-14T15:14:04 IST" name="openURL" finished-at="2026-09-14T15:14:40 IST" duration-ms="35582" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openURL -->
+        <test-method signature="testStep7_CheckoutPageValidation()[pri:0, instance:Test.DemoR_D@bcec361]" started-at="2026-09-14T15:14:40 IST" name="testStep7_CheckoutPageValidation" finished-at="2026-09-14T15:15:52 IST" duration-ms="71905" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStep7_CheckoutPageValidation -->
+        <test-method is-config="true" signature="closer()[pri:0, instance:Test.DemoR_D@bcec361]" started-at="2026-09-14T15:15:52 IST" name="closer" finished-at="2026-09-14T15:15:52 IST" duration-ms="246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closer -->
+      </class> <!-- Test.DemoR_D -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -78,7 +78,7 @@ public class DemoR_D extends Base {
 	      
     @Test
     public void testStep7_CheckoutPageValidation() throws InterruptedException {
-log.info("========== STEP 7: CHECKOUT PAGE VALIDATION TEST STARTED ==========");
+log.info("========== STEP 1: CHECKOUT PAGE VALIDATION TEST STARTED ==========");
 
 
 
@@ -93,7 +93,7 @@ log.info("========== STEP 7: CHECKOUT PAGE VALIDATION TEST STARTED ==========");
 	//landingpage.SearchField().sendKeys(prop.getProperty("skunumber"));
 	//landingpage.SearchButton().click();
 	
-/*  //Add Product to Cart===========================
+	/*  //Add Product to Cart===========================
 	searchpage.AddToCartButton().click();
 	Thread.sleep(5000);
 	searchpage.ContinueShoppingButton().click();
@@ -104,7 +104,7 @@ log.info("========== STEP 7: CHECKOUT PAGE VALIDATION TEST STARTED ==========");
 	cartpage.ProceedToCheckoutButton().click();            */
 	
 	//Search value increase (Using For Loop)===========================================
-/*	for (int i = 201; i <= 205; i++) {
+	/*	for (int i = 201; i <= 205; i++) {
 
 	    landingpage.SearchField().clear();
 	    landingpage.SearchField().sendKeys(String.valueOf(i));
@@ -123,34 +123,6 @@ log.info("========== STEP 7: CHECKOUT PAGE VALIDATION TEST STARTED ==========");
 	    }
     }*/
 
-	//URL increase (Using For Loop(With try, catch) - Working)===========================================
-  for(int order_id=74943; order_id<=74946; order_id++) {
-	
-		try {
-		driver.get("https://www.poscentral.biz/index.php?dispatch=orders.details&order_id=" + order_id);
-
-		
-	    Thread.sleep(2000);
-	       
-	    
-		if(myorderpage.CustomerInfoHeader().isDisplayed()) {
-			
-			System.out.println("Invoice List clicked for Order ID: " + order_id + " -- Pass ✔✔✔✔✔");
-			myorderpage.InvoiceList().click();
-		}
-		
-		}catch (NoSuchElementException e) {
-		
-			System.out.println("Order not found for : " + order_id + " -- Fail ❌❌❌❌❌ ( Skipping this order.)");
-	
-			} catch (Exception e) {
-			
-			System.out.println("Order ID = " + order_id	+ " Error: " + e.getMessage()); 
-			
-			}
-	
-		}
-		
 	//URL increase (Using For Loop)===========================================		
 	/*	for (int order_id = 74945; order_id <= 74948; order_id++) {
 		
@@ -172,14 +144,35 @@ log.info("========== STEP 7: CHECKOUT PAGE VALIDATION TEST STARTED ==========");
 		Thread.sleep(2000);
 	
 	}*/
-	
-	
-  	//URL increase (Using For Loop)===========================================		
-	/*	for (int order_id = 74945; order_id <= 74948; order_id++) {
 
+
+	//URL increase (Using For Loop(With Exception Handling) - Working)===========================================
+   	/* for(int order_id=74943; order_id<=74946; order_id++) {
 	
-	}*/
-  
+		try {
+		driver.get("https://www.poscentral.biz/index.php?dispatch=orders.details&order_id=" + order_id);
+		
+	    Thread.sleep(2000);	       
+	    
+		if(myorderpage.CustomerInfoHeader().isDisplayed()) {
+			
+			System.out.println("Invoice List clicked for Order ID: " + order_id + " -- Pass ✔✔✔✔✔");
+			myorderpage.InvoiceList().click();
+		}
+		
+		}catch (NoSuchElementException e) {
+		
+			System.out.println("Order not found for : " + order_id + " -- Fail ❌❌❌❌❌ ( Skipping this order.)");
+	
+			} catch (Exception e) {
+			
+			System.out.println("Order ID = " + order_id	+ " Error: " + e.getMessage()); 
+			
+			}
+	
+		}*/
+		
+			
   
   
   
@@ -188,6 +181,9 @@ log.info("========== STEP 7: CHECKOUT PAGE VALIDATION TEST STARTED ==========");
 	
 
     
+  
+  
+  
     }
 } 
   
